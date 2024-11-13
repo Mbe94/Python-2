@@ -25,7 +25,6 @@ print("Libros después de eliminar uno:")
 print(biblioteca)
 
 # Verificamos si un libro está en la colección
-# (En este caso, solo observamos el resultado en la impresión)
 print("¿Está 'The Data Science Handbook: Advice and Insights from 25 Amazing Data Scientists' en la colección?")
 print("The Data Science Handbook: Advice and Insights from 25 Amazing Data Scientists" in biblioteca)
 
