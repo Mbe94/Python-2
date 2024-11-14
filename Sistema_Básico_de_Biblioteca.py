@@ -54,3 +54,19 @@ print("Libros exclusivos de cada colección:", libros_unicos)
 # Unión: Todos los libros en ambas colecciones
 todos_libros = novedades.union(recomendados)
 print("Todos los libros:", todos_libros)
+
+# Unión: Todos los libros en ambas colecciones
+todos_libros = biblioteca | novedades | recomendados
+print("Todos los libros (Unión):", todos_libros)
+
+# Intersección: Libros en común entre las colecciones
+libros_comunes = biblioteca & novedades & recomendados
+print("Libros en ambas colecciones (Intersección):", libros_comunes)
+
+# Diferencia: Libros en 'Biblioteca' que no están en 'Novedades' ni en 'Recomendados'
+solo_biblioteca = biblioteca - novedades - recomendados
+print("Libros solo en Biblioteca (Diferencia):", solo_biblioteca)
+
+# Diferencia Simétrica: Libros que están en una colección pero no en ambas
+libros_unicos = biblioteca ^ novedades ^ recomendados
+print("Libros exclusivos de cada colección (Diferencia Simétrica):", libros_unicos)
