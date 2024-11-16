@@ -235,3 +235,48 @@ print(palabras_largas)  # {'elefante': 8, 'jirafa': 6}
 ```
 
 Las condiciones en dictionary comprehension ofrecen una forma elegante de crear diccionarios filtrados, mejorando la legibilidad y eficiencia del código.
+
+## Lists vs. Tuples vs. Sets
+
+En Python, las listas, tuplas y sets son estructuras de datos importantes, cada una con sus propias características y usos. Aquí se presenta una comparación entre ellas:
+
+### Listas
+
+- **Mutables:** Se pueden modificar después de su creación.
+- **Ordenadas:** Mantienen el orden de inserción.
+- **Permiten duplicados:** Pueden contener elementos repetidos.
+- **Sintaxis:** Se definen con corchetes [].
+
+```python
+mi_lista = [1, 2, 3, 2, 4]
+mi_lista.append(5)  # Añade un elemento
+print(mi_lista)  # Output: [1, 2, 3, 2, 4, 5]
+```
+
+### Tuplas
+
+- **Inmutables:** No se pueden modificar después de su creación.
+- **Ordenadas:** Mantienen el orden de inserción.
+- **Permiten duplicados:** Pueden contener elementos repetidos.
+- **Sintaxis:** Se definen con paréntesis ().
+
+```python
+mi_tupla = (1, 2, 3, 2, 4)
+# mi_tupla[0] = 5  # Esto causaría un error
+print(mi_tupla)  # Output: (1, 2, 3, 2, 4)
+```
+
+### Sets
+
+- **Mutables:** Se pueden modificar después de su creación.
+- **No ordenados:** No mantienen un orden específico.
+- **No permiten duplicados:** Cada elemento es único.
+- **Sintaxis:** Se definen con llaves {} o la función set().
+
+```python
+mi_set = {1, 2, 3, 2, 4}
+mi_set.add(5)  # Añade un elemento
+print(mi_set)  # Output: {1, 2, 3, 4, 5}
+```
+
+Cada estructura tiene sus propios casos de uso. Las listas son versátiles y comúnmente usadas. Las tuplas son útiles para datos que no deben cambiar. Los sets son ideales para eliminar duplicados y realizar operaciones de conjuntos.
