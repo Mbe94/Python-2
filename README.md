@@ -218,3 +218,20 @@ print(pares)  # {'b': 2, 'd': 4}
 ```
 
 Las dictionary comprehensions son una herramienta poderosa para crear y transformar diccionarios de manera eficiente y legible en Python.
+
+### Uso de condiciones en Dictionary Comprehension
+
+Las condiciones en dictionary comprehension permiten filtrar elementos basados en criterios específicos. Esto es útil para crear diccionarios selectivos a partir de datos existentes.
+
+```python
+# Ejemplo: Crear un diccionario de números impares y sus cuadrados
+impares_cuadrados = {x: x**2 for x in range(10) if x % 2 != 0}
+print(impares_cuadrados)  # {1: 1, 3: 9, 5: 25, 7: 49, 9: 81}
+
+# Ejemplo: Filtrar palabras por longitud
+palabras = ['gato', 'perro', 'elefante', 'ratón', 'jirafa']
+palabras_largas = {palabra: len(palabra) for palabra in palabras if len(palabra) > 4}
+print(palabras_largas)  # {'elefante': 8, 'jirafa': 6}
+```
+
+Las condiciones en dictionary comprehension ofrecen una forma elegante de crear diccionarios filtrados, mejorando la legibilidad y eficiencia del código.
