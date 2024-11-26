@@ -152,3 +152,72 @@ print(palabras_con_a)
 numbers6 = [1, 2, 3, 4, 5, 6, 9, 12]
 newnumbers6 = [i*i for i in numbers6 if i % 3 ==0]
 print(newnumbers6)
+
+#----------------------------------------
+
+#Cuadrados de una lista
+#Crea una lista con los cuadrados de los números del 1 al 10.
+
+cuadradoslista = [i*i for i in range(1,11)]
+print(cuadradoslista)
+
+#----------------------------------------
+
+#Números pares
+#Genera una lista con los números pares entre el 1 y el 20.
+
+pareslista = [i for i in range(1,21) if i % 2 == 0]
+print(pareslista)
+
+#----------------------------------------
+
+#Longitudes de palabras
+#De una lista de palabras, crea una nueva lista con las longitudes de cada palabra.
+
+listapalabras = ['liberalismo','Impuestos','Economia','Hayek','Von Mises']
+longitudpalabras = [len(i) for i in listapalabras]
+print(longitudpalabras)
+
+#----------------------------------------
+
+#Temperaturas en Fahrenheit
+#dada una lista de temperaturas en Celsius, convierte cada una a Fahrenheit usando la fórmula: F = (C*9/5)+32
+
+celsius = [0, 20, 30, 40]
+fahrenheit = [(temp * 9/5) + 32 for temp in celsius]
+print(fahrenheit)
+
+#----------------------------------------
+
+#Dobles de números negativos
+#De una lista de números, crea una nueva lista con el doble de los números negativos.
+
+listanumeros = [5, -2, -7, 8, 0]
+listanumerosnegativos = [i+i for i in listanumeros if i < 0]
+print(listanumerosnegativos)
+
+#----------------------------------------
+
+#Lista de caracteres
+#Convierte una cadena en una lista de caracteres únicos.
+
+entradapalabra = 'comprehension'
+listanumerosnegativos = [i for i in entradapalabra]
+print(listanumerosnegativos)
+
+#----------------------------------------
+
+#Filtrar cadenas vacías
+#Dada una lista de cadenas, elimina las cadenas vacías.
+
+entradacadenas = ["python", "", "code", ""]
+listacadenasvacias = [i for i in entradacadenas if i]
+print(listacadenasvacias)
+
+#----------------------------------------
+
+#Tablas de multiplicar
+#Genera una lista de las tablas de multiplicar del 2 al 5.
+
+tablademultiplicar = [[numero * i for i in range(1, 6)] for numero in range(2, 6)]
+print(tablademultiplicar)
