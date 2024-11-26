@@ -280,3 +280,186 @@ print(mi_set)  # Output: {1, 2, 3, 4, 5}
 ```
 
 Cada estructura tiene sus propios casos de uso. Las listas son versátiles y comúnmente usadas. Las tuplas son útiles para datos que no deben cambiar. Los sets son ideales para eliminar duplicados y realizar operaciones de conjuntos.
+
+## Funciones en Python
+
+Las funciones en Python son bloques de código reutilizables que realizan una tarea específica. Permiten organizar el código, mejorar la legibilidad y evitar la repetición.
+
+### Definición de una función
+
+En Python, se define una función usando la palabra clave 'def', seguida del nombre de la función y paréntesis que pueden contener parámetros:
+
+```python
+def saludar(nombre):
+    return f"Hola, {nombre}!"
+
+# Llamada a la función
+mensaje = saludar("Ana")
+print(mensaje)  # Output: Hola, Ana!
+```
+
+### Parámetros y argumentos
+
+Los parámetros son variables listadas en la definición de la función. Los argumentos son los valores que se pasan a la función cuando se llama:
+
+```python
+def suma(a, b):
+    return a + b
+
+resultado = suma(3, 5)
+print(resultado)  # Output: 8
+```
+
+### Argumentos por defecto
+
+Python permite asignar valores por defecto a los parámetros:
+
+```python
+def potencia(base, exponente=2):
+    return base ** exponente
+
+print(potencia(3))     # Output: 9 (3^2)
+print(potencia(3, 3))  # Output: 27 (3^3)
+```
+
+### *args y **kwargs
+
+Python ofrece formas de pasar un número variable de argumentos a una función:
+
+```python
+# *args permite pasar un número variable de argumentos posicionales
+def suma(*args):
+    return sum(args)
+
+print(suma(1, 2, 3, 4))  # Output: 10
+
+# **kwargs permite pasar un número variable de argumentos con palabra clave
+def info_persona(**kwargs):
+    for clave, valor in kwargs.items():
+        print(f"{clave}: {valor}")
+
+info_persona(nombre="Juan", edad=30, ciudad="Madrid")
+```
+
+Las funciones son una parte fundamental de la programación en Python, permitiendo escribir código más modular y mantenible.
+
+### Declaración return en funciones
+
+La declaración 'return' se utiliza en funciones para especificar el valor que la función debe devolver cuando es llamada. Cuando se ejecuta una declaración 'return', la función termina inmediatamente y devuelve el valor especificado.
+
+```python
+def cuadrado(numero):
+    return numero ** 2
+
+resultado = cuadrado(4)
+print(resultado)  # Output: 16
+```
+
+Puntos importantes sobre 'return':
+
+- Una función puede tener múltiples declaraciones 'return', pero solo se ejecutará una.
+- Si no se especifica un valor después de 'return', la función devolverá 'None'.
+- Se puede devolver múltiples valores utilizando una tupla.
+
+```python
+def dividir_y_residuo(a, b):
+    cociente = a // b
+    residuo = a % b
+    return cociente, residuo
+
+resultado = dividir_y_residuo(17, 5)
+print(resultado)  # Output: (3, 2)
+```
+
+El uso adecuado de 'return' es crucial para crear funciones efectivas y reutilizables en Python.
+
+### Parámetros por defecto y múltiples returns
+
+Los parámetros por defecto y múltiples returns son características avanzadas de las funciones en Python que proporcionan mayor flexibilidad en la programación.
+
+```python
+def calcular_precio(precio_base, descuento=0, impuesto=0.21):
+    precio_con_descuento = precio_base * (1 - descuento)
+    precio_final = precio_con_descuento * (1 + impuesto)
+    
+    return precio_con_descuento, precio_final
+
+# Usando valores por defecto
+precio_base, precio_final = calcular_precio(100)
+print(f"Precio base: {precio_base}, Precio final: {precio_final}")
+
+# Especificando descuento
+precio_base, precio_final = calcular_precio(100, 0.1)
+print(f"Precio con 10% descuento: {precio_base}, Precio final: {precio_final}")
+```
+
+Aspectos importantes a considerar:
+
+- Los parámetros por defecto deben definirse al final de la lista de parámetros.
+- Los valores por defecto se evalúan una sola vez cuando se define la función.
+- Se pueden devolver múltiples valores separándolos por comas.
+- Los valores devueltos se pueden asignar a variables individuales mediante desempaquetado.
+
+## El Scope (Alcance) en Python
+
+El scope o alcance en Python determina la visibilidad y accesibilidad de las variables en diferentes partes del código. Python tiene diferentes niveles de scope:
+
+### Local Scope
+
+Variables definidas dentro de una función que solo son accesibles dentro de esa función:
+
+```python
+def mi_funcion():
+    x = 10  # variable local
+    print(x)
+
+mi_funcion()  # Output: 10
+# print(x)  # Esto causaría un error porque x es local a mi_funcion()
+```
+
+### Global Scope
+
+Variables definidas en el nivel principal del programa que son accesibles desde cualquier parte:
+
+```python
+y = 20  # variable global
+
+def otra_funcion():
+    print(y)  # Podemos acceder a la variable global
+    
+otra_funcion()  # Output: 20
+```
+
+### La palabra clave 'global'
+
+Permite modificar una variable global desde dentro de una función:
+
+```python
+contador = 0
+
+def incrementar():
+    global contador
+    contador += 1
+    return contador
+
+print(incrementar())  # Output: 1
+print(contador)       # Output: 1
+```
+
+### Nonlocal Scope
+
+Usado en funciones anidadas para acceder a variables de la función exterior:
+
+```python
+def funcion_exterior():
+    x = 1
+    def funcion_interior():
+        nonlocal x
+        x += 1
+        return x
+    return funcion_interior()
+
+print(funcion_exterior())  # Output: 2
+```
+
+Entender el scope es crucial para escribir código Python efectivo y evitar errores comunes relacionados con la visibilidad de variables.
