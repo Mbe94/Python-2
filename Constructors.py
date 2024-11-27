@@ -10,6 +10,7 @@
 
 #Ejemplo
 numeros = [x for x in range(5)]  # [0, 1, 2, 3, 4]
+print(numeros)
 
 #-----------------------------------------------------------------------------------------
 
@@ -22,3 +23,4 @@ numeros = [x for x in range(5)]  # [0, 1, 2, 3, 4]
 keys = ["nombre", "edad", "país"]
 values = ["Ana", 25, "Bolivia"]
 diccionario = {k: v for k, v in zip(keys, values)}  # {'nombre': 'Ana', 'edad': 25, 'país': 'Bolivia'}
+print(diccionario)
