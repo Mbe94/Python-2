@@ -19,3 +19,36 @@ resultado_area = area_triangulo(5,10)
 print(resultado_area)
 
 #---------------------------------------------------------------------------------------------------
+
+# Obtener el cuadrado de un número
+# Escribe una función cuadrado que reciba un número y retorne su cuadrado.
+
+def cuadrado(x):
+    return (x * x)
+
+resultado_cuadrado = cuadrado(4)
+print(resultado_cuadrado)
+
+#---------------------------------------------------------------------------------------------------
+
+# Convertir grados Celsius a Fahrenheit
+# Define una función celsius_a_fahrenheit que convierta una temperatura dada en grados Celsius a Fahrenheit y la retorne.
+
+def celsius_a_fahrenheit(c):
+    return ((9 % 5 )*c)+32
+
+resultado_grados = celsius_a_fahrenheit(100)
+print(resultado_grados)
+
+#---------------------------------------------------------------------------------------------------
+
+# Concatenar palabras
+# Crea una función concatenar que tome dos cadenas de texto y retorne su concatenación.
+
+def conc(x,y):
+    return x+y
+
+resultado_concatenacion = conc("Hola ","Mundo")
+print(resultado_concatenacion)
+
+#---------------------------------------------------------------------------------------------------
