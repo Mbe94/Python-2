@@ -17,3 +17,4 @@ if __name__ == '__main__':
     generate_bar_chart()
     generate_pie_chart()
     
+print('hello')
