@@ -16,5 +16,3 @@ if __name__ == '__main__':
     values = [10,20,30]
     generate_bar_chart()
     generate_pie_chart()
-    
-print('hello')
