@@ -1,7 +1,7 @@
 #Estos son herramientas muy prácticas para manipular datos de manera eficiente y son especialmente útiles en comprensiones:
 
 #-----------------------------------------------------------------------------------------
-
+    
 #range()
 #¿Qué hace?: Genera una secuencia de números, que puede ser usada para iterar en bucles o comprensiones.
 

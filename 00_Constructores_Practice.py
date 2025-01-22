@@ -47,3 +47,11 @@ sorted_words = [word for word in sorted(words, key=len)]
 print(sorted_words)
 
 #--------------------------------------------------------
+
+#Ingles
+#Built-in Functios
+
+#Task: Use range() to generate a list of even numbers from 2 to 20
+
+even_numbers = [i for i in range(2, 21) if i % 2 == 0]
+print(even_numbers)
