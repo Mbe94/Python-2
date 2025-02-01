@@ -55,3 +55,36 @@ print(sorted_words)
 
 even_numbers = [i for i in range(2, 21) if i % 2 == 0]
 print(even_numbers)
+
+#----------------------------
+
+#Range
+#Use range() to generate a list of numbers from 10 to 1 in descending order and print the list.
+
+list_of_numbers = [ i for i in range(1,11)]
+print(list_of_numbers)
+
+#----------------------------
+
+#Range
+#Use range() to generate a list of multiples of 5 from 5 to 50 and print the list
+
+list_of_multiples = [i for i in range(5,51,5)]
+print(list_of_multiples)
+
+
+#Task:
+#Use range() to generate a list of odd numbers from 1 to 19 and print the list.
+
+odd_numbers = [i for i in range(1, 20, 2)]
+print(odd_numbers)
+
+#Task:
+#Write a Python program that prints all even numbers between 1 and 50, but instead of printing numbers divisible by 10, it should print "Skipped!".
+
+for num in range(1, 51):  # Iterate from 1 to 50
+    if num % 2 == 0:  # Check if the number is even
+        if num % 10 == 0:  # Check if the number is divisible by 10
+            print("Skipped!")
+        else:
+            print(num)
